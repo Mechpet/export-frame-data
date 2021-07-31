@@ -1,0 +1,1 @@
+-- Exports frame data from Aseprite to a .txt file used in my game
