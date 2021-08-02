@@ -12,7 +12,7 @@ local destName, fileName
 function sliceToLastSubstr(str, substr)
     assert(type(str) == "string", "Passed argument str to sliceToLastSubstr is not a string.")
     assert(type(substr) == "string", "Passed argument substr to sliceToLast is not a string.")
-    
+
     local lastIndex, index = 1, 0
     
     while (index ~= nil) do -- Keep finding leading '\' until there are no more - the last found index is the index of the last '\' in str
@@ -124,7 +124,7 @@ dlg:button {
         -- Each tag symbolizes a separate animation
         for tagNo, tag in ipairs(sprite.tags) do
             -- Write: animation name in style "<n_NAME|", where n is the animation # and NAME is the animation name
-            io.write("\n<"..tagNo.."_"..tag.name.."|")
+            io.write("\n<"..(tagNo - 1).."_"..tag.name.."|")
 
             -- Write: animation # of frames in style "[n]", where n is the # of frames
             io.write("\n["..tag.frames.."]")
